@@ -16,8 +16,17 @@ const render = require("./lib/htmlRenderer");
 
 //add function to figure out which type of employee is being added
 function employeeType () {
-
+    inquirer
+        .prompt([
+            {
+                type: 'list',
+                message: 'What is the type of employee being added to the team?',
+                name: 'role',
+                choices: ['Engineer', 'Intern', 'Manager'],
+            }
+        ])
 }
+
 //add functions for each of the types of employees to be added
 function addEngineer () {
 
