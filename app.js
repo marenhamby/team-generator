@@ -123,7 +123,37 @@ function addIntern() {
 };
 
 function addManager() {
-
+    console.log("Adding Manager")
+    inquirer.prompt([
+        //add question for each parameter listed in the manager constructor
+        {
+            type: 'input',
+            message: 'What is the name of the manager?',
+            name: 'managerName',
+        },
+        {
+            type: 'input',
+            message: 'What is the ID of the manager?',
+            name: 'managerID',
+        },
+        {
+            type: 'input',
+            message: 'What is the email of the manager?',
+            name: 'managerEmail',
+        },
+        {
+            type: 'input',
+            message: 'What is the school of the manager?',
+            name: 'managerSchool',
+        }
+    ]).then ((data) => {
+        //add data as new Manager
+        const newManager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerSchool);
+        //add the new manager to the team array
+        myTeam.push(newManager);
+        //start over to ask about adding another team member
+        employeeType();
+    })
 };
 
 //add function to render the final team
