@@ -13,6 +13,10 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+//empty array to hold the team members in
+const team = [];
+
+//run the function to start asking questions about what team members to add
 employeeType();
 
 //add function to figure out which type of employee is being added, then run function according to what choice is selected
