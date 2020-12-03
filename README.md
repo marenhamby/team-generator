@@ -15,4 +15,9 @@ This application requires you to download the Inquirer npm package as well as je
 ## Testing
 This application uses jest to run testing. You can run the tests by typing "npm run test" in the terminal.
 
-## Screenshots
+## Screenshot
+Click on the screenshot for a video running through the code in the terminal:
+
+<a href="https://drive.google.com/file/d/1_Ek1OIyZ5LXbulOdheqjlfYze9Rie_Xi/preview
+" target="_blank"><img src="./assets/generated-team-screenshot.PNG" 
+alt="Example Runthrough" width="240" height="180"/></a>
