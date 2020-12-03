@@ -14,7 +14,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 //empty array to hold the team members in
-const team = [];
+const myTeam = [];
 
 //run the function to start asking questions about what team members to add
 employeeType();
@@ -76,6 +76,8 @@ function addEngineer() {
     ]).then ((data) => {
         //add data as new Engineer
         const newEngineer = new Engineer(data.engineerName, data.engineerID, data.engineerEmail, data.engineerGithub);
+        //add the new engineer to the team array
+        myTeam.push(newEngineer);
         //start over to ask about adding another team member
         employeeType();
     })
