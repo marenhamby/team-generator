@@ -47,6 +47,29 @@ function employeeType() {
 //add functions for each of the types of employees to be added
 function addEngineer() {
     console.log("Adding Engineer")
+    inquirer.prompt([
+        //add question for each parameter listed in the engineer constructor
+        {
+            type: 'input',
+            message: 'What is the name of the engineer?',
+            name: 'engineerName',
+        },
+        {
+            type: 'input',
+            message: 'What is the ID of the engineer?',
+            name: 'engineerID',
+        },
+        {
+            type: 'input',
+            message: 'What is the email of the engineer?',
+            name: 'engineerEmail',
+        },
+        {
+            type: 'input',
+            message: 'What is the GitHub username of the engineer?',
+            name: 'engineerGithub',
+        }
+    ])
 }
 
 function addIntern() {
