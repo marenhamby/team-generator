@@ -21,7 +21,6 @@ employeeType();
 
 //add function to figure out which type of employee is being added, then run function according to what choice is selected
 function employeeType() {
-    console.log("running!")
     inquirer.prompt([
         {
             type: 'list',
@@ -31,22 +30,18 @@ function employeeType() {
         }
     ]).then(function ({ role }) {
         if (role === "Engineer") {
-            console.log("Engineer selected")
             //run the addEngineer function if the Engineer is selected
             addEngineer();
         };
         if (role === "Intern") {
-            console.log("Intern selected")
             //run the addIntern function if the Intern is selected
             addIntern();
         };
         if (role === "Manager") {
-            console.log("Manager selected")
             //run the addManager function if the Manager is selected
             addManager();
         };
         if (role === "No more team members needed") {
-            console.log("Team full")
             //run the function to render the team
             generateTeam();
         };
@@ -55,7 +50,6 @@ function employeeType() {
 
 //add functions for each of the types of employees to be added
 function addEngineer() {
-    console.log("Adding Engineer")
     inquirer.prompt([
         //add question for each parameter listed in the engineer constructor
         {
@@ -89,7 +83,6 @@ function addEngineer() {
 };
 
 function addIntern() {
-    console.log("Adding Intern")
     inquirer.prompt([
         //add question for each parameter listed in the intern constructor
         {
@@ -123,7 +116,6 @@ function addIntern() {
 };
 
 function addManager() {
-    console.log("Adding Manager")
     inquirer.prompt([
         //add question for each parameter listed in the manager constructor
         {
