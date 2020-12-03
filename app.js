@@ -25,9 +25,9 @@ function employeeType() {
     inquirer.prompt([
         {
             type: 'list',
-            message: 'What is the type of employee being added to the team?',
+            message: 'What type of employee needs to be added to the team?',
             name: 'role',
-            choices: ['Engineer', 'Intern', 'Manager'],
+            choices: ['Engineer', 'Intern', 'Manager', 'No more team members needed'],
         }
     ]).then(function ({ role }) {
         if (role === "Engineer") {
@@ -44,6 +44,11 @@ function employeeType() {
             console.log("Manager selected")
             //run the addManager function if the Manager is selected
             addManager();
+        };
+        if (role === "No more team members needed") {
+            console.log("Team full")
+            //run the function to render the team
+            generateTeam();
         };
     })
 }
