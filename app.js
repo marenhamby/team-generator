@@ -89,7 +89,37 @@ function addEngineer() {
 };
 
 function addIntern() {
-
+    console.log("Adding Intern")
+    inquirer.prompt([
+        //add question for each parameter listed in the intern constructor
+        {
+            type: 'input',
+            message: 'What is the name of the intern?',
+            name: 'internName',
+        },
+        {
+            type: 'input',
+            message: 'What is the ID of the intern?',
+            name: 'internID',
+        },
+        {
+            type: 'input',
+            message: 'What is the email of the intern?',
+            name: 'internEmail',
+        },
+        {
+            type: 'input',
+            message: 'What is the school of the intern?',
+            name: 'internSchool',
+        }
+    ]).then ((data) => {
+        //add data as new Intern
+        const newIntern = new Intern(data.internName, data.internID, data.internEmail, data.internSchool);
+        //add the new intern to the team array
+        myTeam.push(newIntern);
+        //start over to ask about adding another team member
+        employeeType();
+    })
 };
 
 function addManager() {
