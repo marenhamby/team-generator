@@ -20,4 +20,4 @@ Click on the screenshot for a video running through the code in the terminal:
 
 <a href="https://drive.google.com/file/d/1_Ek1OIyZ5LXbulOdheqjlfYze9Rie_Xi/preview
 " target="_blank"><img src="./assets/generated-team-screenshot.PNG" 
-alt="Example Runthrough" width="240" height="180"/></a>
+alt="Example Runthrough" width="600"/></a>
