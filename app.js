@@ -143,12 +143,12 @@ function addManager() {
         },
         {
             type: 'input',
-            message: 'What is the school of the manager?',
-            name: 'managerSchool',
+            message: 'What is the office number of the manager?',
+            name: 'managerOffice',
         }
     ]).then ((data) => {
         //add data as new Manager
-        const newManager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerSchool);
+        const newManager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice);
         //add the new manager to the team array
         myTeam.push(newManager);
         //start over to ask about adding another team member
