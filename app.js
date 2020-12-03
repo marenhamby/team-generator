@@ -16,45 +16,44 @@ const render = require("./lib/htmlRenderer");
 employeeType();
 
 //add function to figure out which type of employee is being added, then run function according to what choice is selected
-function employeeType () {
+function employeeType() {
     console.log("running!")
-    inquirer
-        .prompt([
-            {
-                type: 'list',
-                message: 'What is the type of employee being added to the team?',
-                name: 'role',
-                choices: ['Engineer', 'Intern', 'Manager'],
-            }
-        ]).then(function ({role}) {
-            if (role === "Engineer") {
-                console.log ("Engineer selected")
-                //run the addEngineer function if the Engineer is selected
-                addEngineer();
-            };
-            if (role === "Intern") {
-                console.log ("Intern selected")
-                //run the addIntern function if the Intern is selected
-                addIntern();
-            };
-            if (role === "Manager") {
-                console.log ("Manager selected")
-                //run the addManager function if the Manager is selected
-                addManager();
-            };
-        })
+    inquirer.prompt([
+        {
+            type: 'list',
+            message: 'What is the type of employee being added to the team?',
+            name: 'role',
+            choices: ['Engineer', 'Intern', 'Manager'],
+        }
+    ]).then(function ({ role }) {
+        if (role === "Engineer") {
+            console.log("Engineer selected")
+            //run the addEngineer function if the Engineer is selected
+            addEngineer();
+        };
+        if (role === "Intern") {
+            console.log("Intern selected")
+            //run the addIntern function if the Intern is selected
+            addIntern();
+        };
+        if (role === "Manager") {
+            console.log("Manager selected")
+            //run the addManager function if the Manager is selected
+            addManager();
+        };
+    })
 }
 
 //add functions for each of the types of employees to be added
-function addEngineer () {
+function addEngineer() {
+    console.log("Adding Engineer")
+}
+
+function addIntern() {
 
 }
 
-function addIntern () {
-    
-}
-
-function addManager () {
+function addManager() {
 
 }
 
