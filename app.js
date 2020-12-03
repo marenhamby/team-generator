@@ -51,7 +51,7 @@ function employeeType() {
             generateTeam();
         };
     })
-}
+};
 
 //add functions for each of the types of employees to be added
 function addEngineer() {
@@ -86,15 +86,15 @@ function addEngineer() {
         //start over to ask about adding another team member
         employeeType();
     })
-}
+};
 
 function addIntern() {
 
-}
+};
 
 function addManager() {
 
-}
+};
 
 //add function to render the final team
 function generateTeam() {
