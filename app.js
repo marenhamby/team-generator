@@ -26,7 +26,7 @@ function employeeType () {
                 name: 'role',
                 choices: ['Engineer', 'Intern', 'Manager'],
             }
-        ]).then(function(role)) {
+        ]).then(function ({role}) {
             if (role === "Engineer") {
                 console.log ("Engineer selected")
                 addEngineer();
@@ -39,7 +39,7 @@ function employeeType () {
                 console.log ("Manager selected")
                 addManager();
             };
-        }
+        })
 }
 
 //add functions for each of the types of employees to be added
