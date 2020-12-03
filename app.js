@@ -15,7 +15,7 @@ const render = require("./lib/htmlRenderer");
 
 employeeType();
 
-//add function to figure out which type of employee is being added
+//add function to figure out which type of employee is being added, then run function according to what choice is selected
 function employeeType () {
     console.log("running!")
     inquirer
@@ -26,7 +26,20 @@ function employeeType () {
                 name: 'role',
                 choices: ['Engineer', 'Intern', 'Manager'],
             }
-        ])
+        ]).then(function(role)) {
+            if (role === "Engineer") {
+                console.log ("Engineer selected")
+                addEngineer();
+            };
+            if (role === "Intern") {
+                console.log ("Intern selected")
+                addIntern();
+            };
+            if (role === "Manager") {
+                console.log ("Manager selected")
+                addManager();
+            };
+        }
 }
 
 //add functions for each of the types of employees to be added
