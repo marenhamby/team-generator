@@ -3,7 +3,6 @@
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
-* [Usage](#usage)
 * [Testing](#testing)
 * [Screenshots](#screenshots)
 
@@ -13,8 +12,7 @@ This program builds a software engineering team in the browser via a command lin
 ## Installation
 This application requires you to download the Inquirer npm package as well as jest for running tests.
 
-## Usage
-
 ## Testing
+This application uses jest to run testing. You can run the tests by typing "npm run test" in the terminal.
 
 ## Screenshots
