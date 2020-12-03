@@ -96,6 +96,12 @@ function addManager() {
 
 }
 
+//add function to render the final team
+function generateTeam() {
+    const finalTeam = render(myTeam);
+    fs.writeFile(outputPath, finalTeam, (err) =>
+    err ? console.log(err) : console.log("Success!"))
+};
 
 
 // Write code to use inquirer to gather information about the development team members,
