@@ -13,9 +13,11 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+employeeType();
 
 //add function to figure out which type of employee is being added
 function employeeType () {
+    console.log("running!")
     inquirer
         .prompt([
             {
