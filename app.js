@@ -69,7 +69,12 @@ function addEngineer() {
             message: 'What is the GitHub username of the engineer?',
             name: 'engineerGithub',
         }
-    ])
+    ]).then ((data) => {
+        //add data as new Engineer
+        const newEngineer = new Engineer(data.engineerName, data.engineerID, data.engineerEmail, data.engineerGithub);
+        //start over to ask about adding another team member
+        employeeType();
+    })
 }
 
 function addIntern() {
