@@ -3,7 +3,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-//dependencies
+//module dependencies
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -15,8 +15,21 @@ const render = require("./lib/htmlRenderer");
 
 
 //add function to figure out which type of employee is being added
+function employeeType () {
 
+}
 //add functions for each of the types of employees to be added
+function addEngineer () {
+
+}
+
+function addIntern () {
+    
+}
+
+function addManager () {
+
+}
 
 
 
